@@ -1,4 +1,9 @@
 #violin plots in R
+#violin plots in R - log transform Viral load
+# Data taken from the paper "Ebola viral load at diagnosis associates with patient outcome and outbreak evolution"
+#https://www.ncbi.nlm.nih.gov/pubmed/?term=Ebola+viral+load+at+diagnosis+associates+with+patient+outcome+and+outbreak+evolution
+#performed imputation for missing values of which there were few
+
 install.packages("plotly")
 library(plotly)
 packageVersion('plotly')
