@@ -14,17 +14,17 @@ library(magrittr)
 library(dplyr)
 update.packages("ggplot2")
 
-data2 <- read.csv(file.choose(), header=T) #EbolaOrig
+data2 <- read.csv(file.choose(), header=T) #EbolaOrig_LN
 data2
 
 df <- data2
 df
 
-#Discharge Type by Age
+#Discharge Type by log Viral Load
 p <- df %>%
   plot_ly(
     x = ~DischType,
-    y = ~Age,
+    y = ~LN_VL,
     split = ~DischType,
     type = 'violin',
     box = list(
@@ -36,10 +36,10 @@ p <- df %>%
   ) %>% 
   layout(
     xaxis = list(
-      title = "Ebola Infection Outcomes Dec2018"
+      title = "Ebola Infection Outcomes"
     ),
     yaxis = list(
-      title = "Age",
+      title = "Log Viral Load",
       zeroline = F
     )
   )
